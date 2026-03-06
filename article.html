@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="fr" data-theme="light">
+<head>
+    <script>
+      (function() {
+        var saved = localStorage.getItem('theme');
+        if (saved) document.documentElement.setAttribute('data-theme', saved);
+      })();
+    </script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>L'évolution des interfaces minimalistes — Kaïs.R</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Syne:wght@400;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="scroll-progress-bar" id="scrollProgress"></div>
+
+    <div class="theme-overlay" id="themeOverlay"></div>
+
+    <nav>
+        <div class="logo"><a href="index.html">Kaïs.R</a></div>
+        <div class="nav-right">
+            <button class="theme-btn" id="themeBtn" aria-label="Toggle theme">◐</button>
+            <div class="menu-btn" id="menuBtn">Menu</div>
+        </div>
+    </nav>
+
+    <div class="menu-overlay" id="menuOverlay">
+        <div class="menu-links">
+            <div class="menu-item"><a href="index.html" class="menu-link">Accueil</a></div>
+            <div class="menu-item"><a href="projects.html" class="menu-link">Projets</a></div>
+            <div class="menu-item"><a href="about.html" class="menu-link">À propos</a></div>
+            <div class="menu-item"><a href="contact.html" class="menu-link">Contact</a></div>
+        </div>
+    </div>
+
+    <div class="main-wrapper">
+
+        <article class="single-article">
+            
+            <div class="article-header reveal-fade-up">
+                <a href="index.html" class="back-link touch-target">← Retour à l'accueil</a>
+                
+                <div class="article-meta">
+                    <span class="article-category">Design & Performance</span>
+                    <span class="article-date">5 Mars 2026</span>
+                </div>
+                
+                <h1 class="article-h1">L'évolution des interfaces minimalistes</h1>
+                <p class="article-lead">Une analyse approfondie de la réduction cognitive dans le design contemporain, de l'ère du skeuomorphisme à la standardisation du flat design interactif.</p>
+            </div>
+
+            <div class="article-body reveal-fade-up">
+                
+                <p>Le minimalisme sur le web est souvent confondu avec un manque de créativité ou une simple volonté esthétique de "faire vide". En réalité, pour un intégrateur ou un designer UX, le minimalisme est une réponse fonctionnelle directe à un problème de charge cognitive.</p>
+
+                <h2>1. La loi de Miller et la charge cognitive</h2>
+                <p>La psychologie cognitive nous apprend que la mémoire de travail humaine ne peut retenir qu'un nombre très limité d'informations simultanément (environ 7 éléments). Chaque élément décoratif inutile sur une page web consomme une partie de cette ressource précieuse.</p>
+                
+                <blockquote>
+                    "La perfection est atteinte, non pas lorsqu'il n'y a plus rien à ajouter, mais lorsqu'il n'y a plus rien à retirer." <br>
+                    <cite>— Antoine de Saint-Exupéry</cite>
+                </blockquote>
+
+                <h2>2. Implémenter le minimalisme par le code</h2>
+                <p>Créer du vide est facile. Créer un vide structuré qui guide l'œil demande de la rigueur mathématique. C'est ici qu'intervient le système d'espacement basé sur une échelle de 8px.</p>
+
+                <p>Voici un exemple de snippet CSS que j'utilise pour standardiser les rythmes verticaux :</p>
+
+<pre><code>/* Standardisation des espacements (Base 8px) */
+:root {
+  --space-sm: 8px;
+  --space-md: 16px;
+  --space-lg: 32px;
+  --space-xl: 64px;
+}
+
+.section {
+  padding-block: var(--space-xl);
+}</code></pre>
+
+                <h2>3. L'importance des micro-interactions</h2>
+                <p>Un site minimaliste sans animations paraîtra "cassé" ou "mort". L'absence de bordures ou d'ombres portées massives (typiques du Web 2.0) doit être compensée par des feedbacks au survol très subtils.</p>
+
+                <ul>
+                    <li><strong>Boutons :</strong> Un léger <code>transform: scale(0.98)</code> au clic.</li>
+                    <li><strong>Liens :</strong> Un soulignement progressif et fluide.</li>
+                    <li><strong>Apparition :</strong> Un fade-in léger lors du scroll.</li>
+                </ul>
+
+                <p>En conclusion, l'intégration web moderne ne consiste pas à empiler des frameworks, mais à maîtriser les fondamentaux du DOM pour délivrer l'information de la manière la plus fluide possible.</p>
+
+            </div>
+
+            <div class="article-footer reveal-fade-up">
+                <hr class="article-divider">
+                <p>Écrit par <strong>Kaïs.R</strong> — Étudiant MIAGE & Web Integrator.</p>
+                <a href="index.html" class="btn-primary touch-target" style="margin-top: 24px;">Lire d'autres notes</a>
+            </div>
+
+        </article>
+
+    </div>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-links">
+                <a href="https://www.instagram.com/kringads?igsh=MXUydG56N3hyZmFyMw%3D%3D&utm_source=qr">Instagram</a>
+                <a href="https://www.linkedin.com/in/ka%C3%AFs-romeu-29b59733a?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app">LinkedIn</a>
+                <a href="mailto:romeukais@gmail.com">Email</a>
+            </div>
+        </div>
+        <div class="footer-big-text">ARTICLE</div>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/studio-freight/lenis@1.0.29/bundled/lenis.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
