@@ -265,7 +265,7 @@ footer {
 
 .footer-big-text {
     position: absolute;
-    bottom: -3rem; /* <-- MODIFIÉ (-3rem au lieu de -2rem) */
+    bottom: -1rem; /* <-- MODIFIÉ (-1rem au lieu de -2rem) */
     left: 0;
     width: 100%;
     font-family: 'Syne', sans-serif;
