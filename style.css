@@ -184,6 +184,7 @@ nav.scrolled {
     transition: background-color 0.6s ease;
     overflow-x: hidden;
     width: 100%;
+    min-height: 100vh;
 }
 
 
@@ -264,19 +265,20 @@ footer {
 
 .footer-big-text {
     position: absolute;
-    bottom: -2rem;
+    bottom: -1rem; /* <-- MODIFIÉ (-1rem au lieu de -2rem) */
     left: 0;
     width: 100%;
     font-family: 'Syne', sans-serif;
     font-size: clamp(2.5rem, 15vw, 18rem);
-    line-height: 0.8;
+    line-height: 0.95; /* <-- MODIFIÉ : Plus d'air pour ne pas écraser les lettres pointues */
     font-weight: 800;
     opacity: 0.1;
-    overflow: hidden;
+    /* overflow: hidden; <-- SUPPRIMÉ */
     white-space: nowrap;
     text-align: center;
     z-index: 1;
     will-change: transform;
+    transform-origin: bottom center; 
 }
 
 .footer-links { display: flex; gap: 2rem; }
